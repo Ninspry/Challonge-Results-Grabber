@@ -9,6 +9,7 @@ class ChallongeGrabber:
         self.url = url
         self.headers = requests.utils.default_headers()
 
+        # Headers so the website won't kick us for being a bot
         self.headers.update({
             'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0',
         })
