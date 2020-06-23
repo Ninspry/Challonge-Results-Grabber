@@ -8,6 +8,7 @@ class ChallongeGrabber:
     def __init__(self, url):
         self.url = url
         self.headers = requests.utils.default_headers()
+        self.error = 0
 
         # Headers so the website won't kick us for being a bot
         self.headers.update({
@@ -19,8 +20,10 @@ class ChallongeGrabber:
             self.soup = BeautifulSoup(self.source, 'html5lib')
         except IOError:
             print("Website read failed")
+            self.error = 1
         except TypeError:
             print("Unknown Error")
+            self.error = 2
 
     """ Returns an integer of the number of players in the given tournament. """
     def get_number_of_players(self):
