@@ -1,11 +1,13 @@
 # Challonge-Results-Grabber
-A simple BeautifulSoup webscraper that gets the results from a challonge bracket page. This will eventually be public.
+This program will get results from the provided challonge bracket. This project is designed with the hope to make it easier to pull results from a bracket website.
 
-### To do for the final product
-- Have a GUI allow the user to input the website to get the results
+The limit for number of players is currently 127. This is due to me struggling to make an algorithm for a double elimination bracket placing so I added some placings manually.
 
-- Error detection to stop false websites from killing the program
+Future work for this may include working out integration for smash.gg also.
 
-- Easy output to clipboard or into a file of some sort for data collection
+### Instructions
+- Input a Challonge bracket link (example: https://www.challonge.com/UoYUltimate38)
 
-- Clean up code so it's easy to read
+- Click *Get Data*
+
+- Get the output results!
